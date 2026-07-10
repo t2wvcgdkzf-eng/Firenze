@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Convite para Nicole</title>
+
+    <link rel="stylesheet" 
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <div id="particulas"></div>
+
+    <div id="intro">
+
+        <h2>Pedro Banhara</h2>
+
+        <p>apresenta</p>
+
+        <h1>um pequeno convite</h1>
+
+    </div>
+
+    <main>
+    
+    <section id="inicio">
+
+      <div class="container">
+
+        <div class="card">
+
+        <h1 class="titulo">
+            Nicole 💛
+        </h1>
+
+        <p class="subtitulo">
+            tenho uma surpresa preparada para você...
+        </p>
+
+        <p class="frase">
+            "Espero que esse pequeno presente possa mostrar o quanto você é importante."
+        </p>
+
+        <button class="botao" id="btnDescobrir">
+            Descobrir ✨
+        </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="mensagem" class="oculta">
+        <div class="container">
+
+            <div class="convite">
+
+                <h1 class="titulo">
+                    " 💫Um convite especial💫"
+                </h1>
+
+                <p class="subtitulo">
+                    Eu poderia fazer algo simples.
+                </p>
+
+                <p class="subtitulo">
+                    Mas por que não um site inteiro...
+                </p>
+
+                <div class="carta-medieval">
+
+                    <button id="abrirCarta" class="botao-medieval">
+                        📜 Abrir a carta
+                    </button>
+
+                    <div class="pergaminho" id="pergaminho">
+
+                        <h2>Nicole 💛</h2>
+
+                        <p>
+                            Preparei essa página web pois um "simples convite" não parecia o suficiente.
+                        </p>
+
+                        <p>
+                            Espero que cada detalhe reflita o quanto pensei na sua experiência com o site. Espero que você goste 🙃
+                        </p>
+
+                        <button class="botao" id="continuar">
+                            Continuar ->
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="convite" class="oculta">
+
+        <div class="container">
+
+            <div class="card-convite">
+
+                <h2>
+                    E então...
+                </h2>
+
+                <p>
+                    Tenho uma pergunta para você.
+                </p>
+
+                <h1>
+                    Você aceita sair comigo?
+                </h1>
+
+                <div class="botoes">
+                    
+                    <button class="aceitar" id="btnSim">
+                        Sim 😁
+                    </button>
+
+                    <button class="recusar" id="btnNao">
+                        Não 😭
+                    </button>
+
+                </div>
+
+                <p id="mensagemNao" class="mensagem-nao"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="data" class="oculta">
+
+        <div class="container">
+
+            <div class="card-convite">
+
+                <h2>Perfeito! 💛</h2>
+
+                <h1>Qual dia você prefere?</h1>
+
+                <input
+                type="date"
+                id="dataEscolhida"
+                class="campo-data">
+
+                <p id="mensagemData" class="mensagem-data"></p>
+
+                <button
+                class="botao"
+                id="continuarHorario">
+
+                Próximo ->
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="tipo-date" class="oculta">
+
+        <div class="container">
+
+            <div class="card-convite">
+
+                <h2>Ultima coisa... 🍴</h2>
+
+                <h1>Do que você está com vontade?</h1>
+
+                <div class="categorias">
+
+                    <div class="categoria" data-tipo="pizza">
+                        🍕
+                        <span>Pizza</span>
+                    </div>
+
+                    <div class="categoria" data-tipo="massas">
+                        🍝
+                        <span>Massas</span>
+                    </div>
+
+                </div>
+
+                <div id="listaRestaurantes"></div>
+
+                <button
+                class="botao"
+                id="continuarRestaurante"
+                disabled>
+            
+                Próximo ->
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="horario" class="oculta">
+
+        <div class="container">
+
+            <div class="card-convite">
+
+                <h2>Ótimo! ⏰</h2>
+
+                <h1>Faria as honras de escolher as horas?</h1>
+
+                <select id="horarioEscolhido" class="campo-select">
+
+                    <option value="">Escolha um horário (por gentileza)</option>
+
+                    <option>12:00</option>
+                    <option>13:00</option>
+                    <option>14:00</option>
+                    <option>15:00</option>
+                    <option>16:00</option>
+                    <option>17:00</option>
+                    <option>18:00</option>
+                    <option>19:00</option>
+                    <option>20:00</option>
+
+                </select>
+
+                <p id="mensagemHorario" class="mensagem-horario"></p>
+
+                <button
+                class="botao"
+                id="continuarTipo">
+
+                Próximo ->
+
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="confirmacao" class="oculta">
+
+        <div class="container">
+
+            <div class="card-convite">
+
+                <h2>💛 Está tudo certo?</h2>
+
+                <div id="resumoDate"></div>
+
+                <button
+                class="botao"
+                id="confirmarDate">
+
+                ✨ Confirmar nosso date ✨
+
+                </button>
+
+            </div>
+            
+        </div>
+
+    </section>
+
+    <section id="final" class="oculta">
+
+        <div class="container">
+
+            <div class="card-final">
+
+                <h1>💛 Obrigado, Nicole 💛</h1>
+
+                <p class="mensagem-final">
+                    Eu espero genuinamente que esse site tenha te arrancado pelo menos uma risada.
+                    Brincadeiras á parte, espero que tenha gostado.
+                </p>
+
+                <div id="resumoFinal"></div>
+
+                <p class="assinatura">
+                    Nos vemos em breve, te aguardo... ✨
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    </main>
+
+    <footer>
+
+        <p>© 2026 |Todos os direitos reservados.</p>
+        <p>Desenvolvido por Pedro Banhara</p>
+        <p>"From the moment i met you, all those year's ago, not a day has gone by when i haven't thought of you."
+            Anakin Skywalkwer, em "Ataque dos Clones"(2002)
+        </p>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
