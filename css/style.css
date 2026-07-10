@@ -274,7 +274,8 @@ footer{
 }
 
 .campo-data{
-    margin: 35px 0;
+    display: block;
+    margin: 35px auto;
     padding: 18px;
     width: 100%;
     max-width: 320px;
@@ -283,6 +284,14 @@ footer{
     border: 2px solid var(--cor-detalhe);
     background: white;
     color: var(--cor-texto);
+}
+
+input[type="date"]{
+    text-align: center;
+}
+
+input[type="date"]::-webkit-date-and-time-value{
+    text-align: center;
 }
 
 .mensagem-nao{
