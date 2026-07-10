@@ -208,6 +208,7 @@ footer{
 
 .card-convite{
     background: var(--cor-card);
+    margin: 0 auto;
     border-radius: 24px;
     padding: clamp(22px,5vw,50px);
     text-align: center;
@@ -277,13 +278,23 @@ footer{
     display: block;
     margin: 35px auto;
     padding: 18px;
-    width: 100%;
-    max-width: 320px;
+    width: 320px;
+    max-width: 100%;
     font-size: 1.1rem;
     border-radius: 15px;
     border: 2px solid var(--cor-detalhe);
     background: white;
     color: var(--cor-texto);
+    text-align: center;
+    appearance: none;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+}
+
+.card-convite input[type="date"]{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 input[type="date"]{
@@ -734,6 +745,11 @@ input[type="date"]::-webkit-date-and-time-value{
     .recusar{
         right: 40px;
         top: 185px;
+    }
+
+    .card-convite input[type="date"]{
+        width: 90%;
+        max-width: 320px;
     }
 
 }
