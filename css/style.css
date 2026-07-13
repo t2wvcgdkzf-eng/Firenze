@@ -309,7 +309,7 @@ input[type="date"]::-webkit-date-and-time-value{
     margin-top: 35px;
     min-height: 30px;
     font-size: 1.2rem;
-    color: var(--cor-dourado);
+    color: var(--cor-texto-secundario);
     font-weight: bold;
     transition: .3s;
 }
@@ -376,7 +376,7 @@ input[type="date"]::-webkit-date-and-time-value{
     cursor: pointer;
     transition: .3s;
 
-    appearence: none;
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 
@@ -758,4 +758,15 @@ input,
 select{
     width: 100%;
     box-sizing: border-box;
+}
+
+.mensagem-print{
+    margin-top: 28px;
+    font-size: 1rem;
+    color: var(--cor-texto-secundario);
+    line-height: 1.6;
+    text-align: center;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -410,6 +410,20 @@ confirmarDate.addEventListener("click", function(){
 
     trocarSecao(secaoConfirmacao, secaoFinal);
 
+    document.getElementById("emailData").value =
+    formatarData(dataSelecionada);
+
+    document.getElementById("emailTipo").value =
+    nomeCategorias[tipoSelecionado];
+
+    document.getElementById("emailRestaurante").value =
+    restauranteSelecionado;
+
+    document.getElementById("emailHorario").value =
+    horarioSelecionado;
+
+    document.getElementById("formConfirmacao").submit();
+
     confetti({
         particleCount: 250,
         spread: 140,
