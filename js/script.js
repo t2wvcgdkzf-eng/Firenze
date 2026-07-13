@@ -126,20 +126,13 @@ function fugir(){
     }
 
     const margem = 20;
-
-    const maxX = area.width - btnNao.offsetWidth - margem;
-    const maxY = area.height - btnNao.offsetHeight - margem;
-
-    const x = margem + Math.random() * (maxX - margem);
-    const y = margem + Math.random() * (maxY - margem);
-
-    btnNao.style.left = x + "px";
-    btnNao.style.top = y + "px";
-
-    mensagemNao.textContent =
-    frases[Math.floor(Math.random() * frases.length)];
-
-    btnNao.blur();
+    const maxX = area.width - btnNao.offsetWidth - margem; 
+    const maxY = area.height - btnNao.offsetHeight - margem; 
+    const x = margem + Math.random() * (maxX - margem); 
+    const y = margem + Math.random() * (maxY - margem); 
+    btnNao.style.left = x + "px"; btnNao.style.top = y + "px"; 
+    mensagemNao.textContent = frases[Math.floor(Math.random() * frases.length)]; 
+    btnNao.blur(); 
 }
 
 btnNao.addEventListener("mouseenter", fugir);
@@ -399,24 +392,7 @@ const nomeCategorias = {
     massas: "🍝 Massas"
 }
 
-confirmarDate.addEventListener("click", function(){
-
-    fetch("https://formsubmit.co/ajax/pedro_banhara@icloud.com", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-    },
-    body: JSON.stringify({
-        Data: formatarData(dataSelecionada),
-        Tipo: nomeCategorias[tipoSelecionado],
-        Restaurante: restauranteSelecionado,
-        Horario: horarioSelecionado
-    })
-})
-.then(response => response.json())
-.then(data => console.log("Enviado!", data))
-.catch(error => console.error(error));
+confirmarDate.addEventListener("click", function () {
 
     resumoFinal.innerHTML = `
     <p><strong>📅 Data:</strong> ${formatarData(dataSelecionada)}</p>
@@ -427,26 +403,27 @@ confirmarDate.addEventListener("click", function(){
 
     trocarSecao(secaoConfirmacao, secaoFinal);
 
-    document.getElementById("emailData").value =
-    formatarData(dataSelecionada);
-
-    document.getElementById("emailTipo").value =
-    nomeCategorias[tipoSelecionado];
-
-    document.getElementById("emailRestaurante").value =
-    restauranteSelecionado;
-
-    document.getElementById("emailHorario").value =
-    horarioSelecionado;
-
-    document.getElementById("formConfirmacao").submit();
-
     confetti({
         particleCount: 250,
         spread: 140,
         origin: { y: 0.6 }
-
     });
+
+    // Envia o e-mail sem travar a interface
+    fetch("https://formsubmit.co/ajax/pedro_banhara@icloud.com", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
+            Data: formatarData(dataSelecionada),
+            Tipo: nomeCategorias[tipoSelecionado],
+            Restaurante: restauranteSelecionado,
+            Horario: horarioSelecionado
+        })
+    })
+    .catch(error => console.error(error));
 
 });
 
