@@ -762,7 +762,7 @@ select{
 
 .mensagem-print{
     margin-top: 28px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: var(--cor-texto-secundario);
     line-height: 1.6;
     text-align: center;
