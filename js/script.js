@@ -401,6 +401,23 @@ const nomeCategorias = {
 
 confirmarDate.addEventListener("click", function(){
 
+    fetch("https://formsubmit.co/ajax/pedro_banhara@icloud.com", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    },
+    body: JSON.stringify({
+        Data: formatarData(dataSelecionada),
+        Tipo: nomeCategorias[tipoSelecionado],
+        Restaurante: restauranteSelecionado,
+        Horario: horarioSelecionado
+    })
+})
+.then(response => response.json())
+.then(data => console.log("Enviado!", data))
+.catch(error => console.error(error));
+
     resumoFinal.innerHTML = `
     <p><strong>📅 Data:</strong> ${formatarData(dataSelecionada)}</p>
     <p><strong>🍽️ Tipo:</strong> ${nomeCategorias[tipoSelecionado]}</p>
