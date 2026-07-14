@@ -417,6 +417,10 @@ confirmarDate.addEventListener("click", function () {
             "Accept": "application/json"
         },
         body: JSON.stringify({
+            _subject: "💛 A Nicole confirmou o date!",
+            _template: "table",
+            _captcha: "false",
+
             Data: formatarData(dataSelecionada),
             Tipo: nomeCategorias[tipoSelecionado],
             Restaurante: restauranteSelecionado,
